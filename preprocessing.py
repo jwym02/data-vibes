@@ -7,9 +7,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 import re
 import nltk
 from nltk.stem import WordNetLemmatizer
-import gensim
-import gensim.corpora as corpora
-from gensim.models import LdaModel
+
 from nltk.tokenize import word_tokenize
 import gensim
 import gensim.corpora as corpora
@@ -22,6 +20,9 @@ import seaborn as sns
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 nltk.download('punkt')
+
+# Load spaCy's English model
+nlp = spacy.load("en_core_web_sm")
 
 # Load the first Excel file
 wikileaks_path = "./data/wikileaks_parsed.xlsx"

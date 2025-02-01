@@ -56,19 +56,9 @@ def generate_word_cloud(df):
 
 # news_df word cloud
 news_fig = generate_word_cloud(news_df)
-# all_text = " ".join(news_df['Text_No_Stopwords'])
-# wordcloud = WordCloud(width=800, height=800, background_color='grey').generate(all_text)
-# news_fig, ax = plt.subplots(figsize=(8, 8))
-# ax.imshow(wordcloud, interpolation='bilinear')
-# ax.axis('off')
 
 # wikileaks_df word cloud
 wikileaks_fig = generate_word_cloud(wikileaks_df)
-# all_text = " ".join(wikileaks_df['Text_No_Stopwords'])
-# wordcloud = WordCloud(width=800, height=800, background_color='gray').generate(all_text)
-# wikileaks_fig, ax = plt.subplots(figsize=(8, 8))
-# ax.imshow(wordcloud, interpolation='bilinear')
-# ax.axis('off')
 
 ##############
 # news_df calculate polarity and subjectivity
