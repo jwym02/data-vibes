@@ -12,7 +12,11 @@ spacy
 gensim
 seaborn
 openpyxl
+<<<<<<< Updated upstream
 wordcloud
 
 # Run this command to install the spaCy model
 # python -m spacy download en_core_web_sm
+=======
+wordcloud
+>>>>>>> Stashed changes
