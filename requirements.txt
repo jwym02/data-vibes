@@ -3,8 +3,16 @@ pandas
 altair
 plotly[express]
 matplotlib
-network
+networkx
 numpy
 scikit-learn
 nltk
 textblob
+spacy
+gensim
+seaborn
+openpyxl
+wordcloud
+
+# Run this command to install the spaCy model
+# python -m spacy download en_core_web_sm
