@@ -15,6 +15,14 @@ from gensim.models.coherencemodel import CoherenceModel
 from gensim.matutils import hellinger
 from tqdm import tqdm
 import seaborn as sns
+import subprocess
+
+# Ensure the SpaCy model is available
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
 
 # Download necessary NLTK data files (if not already available)
 nltk.download('wordnet')
