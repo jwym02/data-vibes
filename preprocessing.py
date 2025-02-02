@@ -29,9 +29,6 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')
 nltk.download('punkt')
 
-# Load spaCy's English model
-nlp = spacy.load("en_core_web_sm")
-
 # Load the first Excel file
 wikileaks_path = "./data/wikileaks_parsed.xlsx"
 wikileaks_df = pd.read_excel(wikileaks_path)

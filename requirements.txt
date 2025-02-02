@@ -8,12 +8,15 @@ numpy
 scikit-learn
 nltk
 textblob
-spacy
 gensim>=4.3.3
 seaborn
 openpyxl
 wordcloud
 scipy
+spacy
+spacy-lookups-data
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0.tar.gz
+
 
 # Run this command to install the spaCy model
 # python -m spacy download en_core_web_sm
