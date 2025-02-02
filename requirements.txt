@@ -9,7 +9,7 @@ scikit-learn
 nltk
 textblob
 spacy
-gensim
+gensim>=4.3.3
 seaborn
 openpyxl
 wordcloud
