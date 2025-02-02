@@ -63,7 +63,7 @@ sentiment.wikileaks_sentim_fig = update_pie_chart(sentiment.wikileaks_sentim_fig
 #######################
 st.title("⚠️ ISD Threat Monitor")
 # Display Dashboard
-col = st.columns((3, 3, 5), gap='medium')
+col = st.columns((2, 5, 2), gap='medium')
 
 with col[0]:  # Word Cloud Section
     st.subheader("Key Word Analysis")
@@ -74,7 +74,11 @@ with col[0]:  # Word Cloud Section
     st.markdown('##### Wikileaks')
     st.pyplot(sentiment.wikileaks_fig)
 
-with col[1]:  # Sentiment Pie Charts
+with col[1]:
+    st.subheader('Entity Relationship')
+    st.pyplot(entity.entity_fig)
+
+with col[2]:  # Sentiment Pie Charts
     st.subheader("Sentiment Analysis")
 
     st.markdown('##### News')
@@ -83,17 +87,17 @@ with col[1]:  # Sentiment Pie Charts
     st.markdown('##### Wikileaks')
     st.pyplot(sentiment.wikileaks_sentim_fig)  # Modified pie chart
 
-with col[2]:
-    st.subheader('Entity Relationship')
-    st.pyplot(entity.entity_fig)
 
     
 container = st.container()
 with container:
     st.subheader("Topic Modeling")
+    col = st.columns((4,3), gap='medium')
 
-    st.markdown('##### K Selection for LDA using Caojuan2009 and Deveaud2014')
-    st.pyplot(topic.k_fig)
+    with col[0]:
+        st.markdown('##### K Selection for LDA using Caojuan2009 and Deveaud2014')
+        st.pyplot(topic.k_fig)
     
-    st.markdown('##### Top 5 Words per Topic')
-    st.dataframe(topic.topic_df)
+    with col[1]:
+        st.markdown('##### Top 5 Words per Topic')
+        st.dataframe(topic.topic_df)

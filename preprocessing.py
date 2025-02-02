@@ -80,17 +80,23 @@ custom_stop_words = {
     "united", "nations", "committee", "report", "review", "internal", "official", "officer", "program", "project",
     "airport", "terminal", "location", "place", "zone",
     "approximately", "next", "prior", "details", "percent", "inclusive",
+    # New additions
     "summer", "winter", "fall", "spring",
     "memo", "dra", "control", "panel", "annual", "result",
     "us", "uk", "eu", "board", "group", "provisional",
-    "department", "infrastructure", "agency", "staff", "heshe", "member", "mr", "however", "non", "g", "idoios"
+    "department", "infrastructure", "agency", "also",
+    "said", "mr", "dr"
 }
 stop_words.update(custom_stop_words)
+
+# modal verbs
+modal_verbs = ["would", "can", "cant", "could", "couldnt", "did", "didnt", "may", "might", "must", "mustnt",
+    "shall", "shant", "should", "shouldnt", "will", "wont", "would", "wouldnt", "dont"]
 
 # Function to remove stopwords (both default and custom)
 def remove_stopwords(text):
     words = text.split()
-    filtered_words = [word for word in words if word not in stop_words]
+    filtered_words = [word for word in words if word not in stop_words and word not in modal_verbs]
     return ' '.join(filtered_words)
 
 # Apply the updated stop words removal to the cleaned text columns
